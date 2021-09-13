@@ -1,6 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import UserPost from "../views/UserPost.vue";
+import PostComments from "../views/PostComments.vue"
 
 Vue.use(VueRouter);
 
@@ -9,6 +11,18 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+  },
+  {
+    path: "/userpost/:id",
+    name: UserPost,
+    component: UserPost,
+    props: true,
+  },
+  {
+    path: "/postcomments/:id",
+    name: PostComments,
+    component: PostComments,
+    props: true,
   },
   {
     path: "/about",
